@@ -15,7 +15,7 @@ public class HealthController {
 
   @GetMapping("/{service}")
   public Map<String, Health> service(@PathVariable String service) {
-    return Map.of("main", new Health(alerting, true, 0), "staging", new Health(alerting, true, 2));
+    return Map.of("prod", new Health(alerting, true, 0), "preProd", new Health(alerting, true, 2));
   }
 
   @PostMapping("/toggle")
